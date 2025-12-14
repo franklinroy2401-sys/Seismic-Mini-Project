@@ -95,10 +95,14 @@ id, ids, sources, time, updated, latitude, longitude, depth_km, place, locationS
 ---
 
 ## How to Run the Project
+ ```sql
 1. Create a MySQL database named `seismic_project`
 2. Execute the SQL file:
-   ```sql
 SOURCE earthquake_queries.sql;
+--Python Dependencies
 pip install -r requirements.txt
 streamlit run app.py
+http://localhost:8501
+
+
 
