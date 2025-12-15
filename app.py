@@ -89,6 +89,15 @@ queries = {
             ORDER BY total DESC
             LIMIT 1;
         """,
+        "Month with the Highest Number of Earthquakes": """
+               SELECT
+                 month,
+                 COUNT(*) AS earthquake_count
+               FROM earthquake
+               GROUP BY month
+               ORDER BY earthquake_count DESC
+               LIMIT 1;
+          """,
         "Day of week with most earthquakes": """
             SELECT DAYNAME(time) AS day_of_week,
             COUNT(*) AS total_earthquakes
@@ -350,3 +359,4 @@ if run:
 
     else:
         st.warning("⚠ No data returned")
+
